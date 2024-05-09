@@ -1,4 +1,4 @@
-import React, { useState, lazy } from 'react'
+import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { Link } from "react-router-dom";
 
@@ -8,8 +8,7 @@ const Signup = ({ showAlert }) => {
     const [signUpUser, setSignUpUser] = useState({
         name: "",
         email: "",
-        password: "",
-        confirm_password: ""
+        password: ""
     })
 
     const handleSignupChange = (e) => {
@@ -56,10 +55,6 @@ const Signup = ({ showAlert }) => {
                     <div className="form-group mb-2">
                         <label htmlFor="password">Password</label>
                         <input type="password" className="form-control" id="password_id" name="password" onChange={handleSignupChange} placeholder="Enter Password" required minLength={5} />
-                    </div>
-                    <div className="form-group mb-2">
-                        <label htmlFor="confirm_password">Confirm Password</label>
-                        <input type="password" className="form-control" id="confirm_password_id" name="confirm_password" onChange={handleSignupChange} placeholder="Enter Password" required />
                     </div>
                     <div className="d-grid">
                         <button type="submit" className="btn btn-primary">Submit</button>
